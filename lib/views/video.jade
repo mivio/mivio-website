@@ -19,6 +19,10 @@ block main_content
   //- p.text-muted= __('article_update_info')
   br
 
-block scripts
-  script(type='text/javascript', src=links.assets.js.main())
 
+block aside_content_top
+  if (relatedVideos)
+    section.tab
+      h3.tab-title= __('related_videos')
+      .tab-content
+        +videoListSmall(relatedVideos)

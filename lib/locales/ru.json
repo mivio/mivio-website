@@ -1,7 +1,8 @@
 {
 	"project_title": "project_title",
 	"project_description": "project_description",
-	"latest_videos": "Новое и интересное",
+	"latest_videos": "Новые видео",
 	"about_us": "about_us",
-	"about_us_info": "about_us_info"
+	"about_us_info": "about_us_info",
+  "related_videos": "Похожие видео"
 }
