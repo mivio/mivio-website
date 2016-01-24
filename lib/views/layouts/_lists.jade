@@ -1,0 +1,26 @@
+mixin videoListMain(list, css)
+  ul.video-list.view-main
+    each item in list
+      - var url = links.video(item.id)
+      li.main-item(class=css)
+        .main-inner
+          a.fine-image(href=url)
+            img.vi-img(src=links.videoImage2(item.sourceId))
+          h3.vi-t
+            a(href=url)=util.wrapAt(item.title, 64)
+          //- p.vi-d=item.description
+          ul.vi-stats
+            li.vi-views= item.countViews
+          
+mixin videoListSmall(list, itemClass)
+  ul.video-list.view-small
+    each item in list
+      - var url = links.video(item.id)
+      li.small-item
+        a.small-img(href=url)
+          img.vi-img(src=links.videoImage(item.sourceId))
+        .small-inner
+          p
+            a.vi-t(href=url)=util.wrapAt(item.title, 58)
+          ul.vi-stats
+            li.vi-views= item.countViews

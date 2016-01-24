@@ -1,0 +1,23 @@
+{
+  "home": "/",
+  "video": "/video/${0}.html",
+  "category": "/${0}",
+  "assets": {
+    "css": {
+      "main": "/main.css"
+    },
+    "js": {
+      "main": "/main.js"
+    }
+  },
+  "actions": {
+    "view": {
+      "video": "/video/${0}/${1}"
+    }
+  },
+  "videoImage": "//i.ytimg.com/vi/${0}/default.jpg",
+  "videoImage1": "//i.ytimg.com/vi/${0}/mqdefault.jpg",
+  "videoImage2": "//i.ytimg.com/vi/${0}/hqdefault.jpg",
+  "videoImage3": "//i.ytimg.com/vi/${0}/sddefault.jpg",
+  "videoImage4": "//i.ytimg.com/vi/${0}/maxresdefault.jpg"
+}

@@ -1,0 +1,24 @@
+extends layouts/main
+
+block metas
+  //- +articleMetas(video, articleText)
+
+block main_content
+  div#video
+    #video-header
+      h1= video.title
+      ul.vi-stats.stats-main
+        li.vi-date= new Date(video.createdAt).toLocaleDateString(lang)
+        //- each item in video.categories
+        //-   li.vi-category
+        //-     a(href=links.category(item.id, {lang: lang}))= item.name
+        li.vi-views= video.countViews
+    #video-iframe
+      iframe(src="https://www.youtube.com/embed/"+video.sourceId, frameborder="0", allowfullscreen)
+    p=video.description
+  //- p.text-muted= __('article_update_info')
+  br
+
+block scripts
+  script(type='text/javascript', src=links.assets.js.main())
+

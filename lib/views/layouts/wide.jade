@@ -1,0 +1,7 @@
+extends root
+
+block content
+  if (contentTitle)
+    h1#content-title.line-header
+      span= contentTitle
+  block main_content

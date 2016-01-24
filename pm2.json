@@ -1,0 +1,5 @@
+{
+  "script"    : "./lib/app.js",
+  "name"      : "trevid-website",
+  "max_memory_restart" : "200M"
+}

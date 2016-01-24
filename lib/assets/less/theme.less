@@ -1,0 +1,115 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body {
+    color: rgba(0, 0, 0, 0.8);
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1000px;
+}
+
+#page-header {
+    margin: 20px 0px;
+    height: 50px;
+}
+
+#page-logo {
+    display: inline-block;
+    padding: 5px 14px;
+    margin-top: 10px;
+    background-color: @brand-primary;
+    font-size: 120%;
+    line-height: 22px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: @border-radius;
+}
+
+#page-menu {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 18px;
+    margin-top: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 40px;
+    >li {
+        display: inline-block;
+        float: left;
+        margin: 5px;
+        >a {
+            display: inline-block;
+            padding: 5px;
+        }
+    }
+}
+
+#page-footer {
+    padding: 15px 0px;
+    font-size: 95%;
+}
+
+#content-title {
+    min-height: 42px;
+}
+
+.line-header {
+    position: relative;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0px;
+        right: 30px;
+        height: 1px;
+        background: #eee;
+    }
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        width: 8px;
+        height: 8px;
+        overflow: hidden;
+        background: @brand-primary;
+        border-radius: @border-radius;
+    }
+    span {
+        background-color: #fff;
+        display: inline-block;
+        padding-right: 20px;
+        position: relative;
+    }
+}
+h1.line-header {
+    &:before {
+        top: 22px;
+    }
+    &:after {
+        top: 18px;
+    }
+}
+h2.line-header {
+    &:before {
+        top: 18px;
+    }
+    &:after {
+        top: 14px;
+    }
+}
+h4.line-header {
+    &:before {
+        top: 10px;
+    }
+    &:after {
+        top: 6px;
+    }
+}
+
+.tab-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+}

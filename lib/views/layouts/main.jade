@@ -1,0 +1,25 @@
+extends root
+
+block content
+  .row
+    section.col-xs-12.col-sm-8
+      if (contentTitle)
+        h1#content-title.line-header
+          span= contentTitle
+      block main_content
+
+    aside.col-xs-12.col-sm-4
+      block aside_content_top
+      section.tab
+        h3.tab-title= __('latest_videos')
+        .tab-content
+          +videoListSmall(latestVideos)
+
+      //- section.tab
+      //-   h3.tab-title= __('stats')
+      //-   .tab-content
+      //-     .row
+      //-       .col-xs-6
+      //-         span.st-count= stats.total
+      //-         span=   __('articles')
+      block aside_content_bottom

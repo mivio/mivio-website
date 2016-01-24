@@ -1,0 +1,24 @@
+mixin articleMetas(article, articleText)
+  meta(property="og:type" content="article")
+  meta(property="og:title" content=article.title)
+  meta(property="og:article:modified_time" content=articleText.updatedAt.toISOString())
+  meta(property="og:article:published_time" content=article.createdAt.toISOString())
+  meta(property="og:image" content=util.imageSrc(article.imageId, 'large'))
+
+mixin articleJsonLd(article, articleText)
+  script(type="application/ld+json").
+    {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "headline": "#{article.title}",
+      "image": "http:#{util.imageSrc(article.imageId, 'large')}",
+      "datePublished": "#{article.createdAt.toISOString()}",
+      "dateModified": "#{articleText.updatedAt.toISOString()}",
+      "description": "#{article.headline}"
+    }
+
+mixin shareButtonsLarge()
+  ul.share-butons.view-large
+    each item in shareButtons
+      li
+        a(class='share-'+item.id, target='_blank', href="#{item.url.replace('%URL',site.head.canonical)}")= util.format(__('share_on_format'), item.name)

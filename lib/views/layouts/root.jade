@@ -1,0 +1,66 @@
+include _lists
+include _helpers
+
+doctype html
+html(lang=lang)
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= (site.head.title || site.title)
+    if (site.head.description)
+      meta(name='description', content=site.head.description)
+    if (site.head.keywords)
+      meta(name='keywords', content=site.head.keywords)
+    block metas
+    link(type='text/css', rel='stylesheet', href=links.assets.css.main())
+    block styles
+    if (site.head.canonical)
+      link(rel='canonical', href=site.head.canonical)
+  body
+    #fb-root
+    #page
+      .container
+        #page-header.clearfix
+          .row
+            .col-xs-5.col-sm-4.col-md-2
+              a#page-logo(href=links.home(), title=config.name)= config.name
+            .col-xs-5.col-sm-8.col-md-7
+              ul#page-menu
+                each item in pageMenu
+                  li
+                    a(class=item.cssClass, href=item.href)= item.text
+            .hidden-xs.hidden-sm.col-md-3
+        #page-content.clearfix
+          block content
+        #page-footer.clearfix
+          .row
+            .col-xs-12.col-sm-6
+              //- .list-set
+              //-   h4.list-title.line-header
+              //-     span= __('project_languages')
+              //-   ul.list-items
+              //-     each item in languages
+              //-       li(class=(lang===item.alpha2?'active':null))
+              //-         a(href=links.home({lang: item.alpha2}))= item.name
+              //-     li
+              //-         a(rel='nofollow' href='http://github.com/openpeaks/openpeaks-articles')= __('add_your_language')
+
+            .col-xs-12.col-sm-6
+                h4.list-title.line-header
+                  span= __('about_us')
+                p= __('about_us_info')
+
+    if (actionUrl)
+      script.
+        (function(){(new Image()).src = '#{actionUrl}';})();
+
+    script(type='text/javascript', src=links.assets.js.main())
+    block scripts
+    //- script.
+    //-   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    //-   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    //-   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    //-   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    //-   ga('create', 'UA-70252851-1', 'auto');
+    //-   ga('send', 'pageview');
