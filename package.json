@@ -1,7 +1,7 @@
 {
-  "name": "trevid-website",
+  "name": "mivio-website",
   "version": "0.1.0",
-  "description": "Trevid website",
+  "description": "Mivio website",
   "main": "./lin/app.js",
   "private": true,
   "scripts": {
@@ -10,18 +10,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/trevid/trevid-website.git"
+    "url": "git+https://github.com/mivio/mivio-website.git"
   },
   "keywords": [
-    "trevid",
+    "mivio",
     "website"
   ],
   "author": "Dumitru Cantea",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/trevid/trevid-website/issues"
+    "url": "https://github.com/mivio/mivio-website/issues"
   },
-  "homepage": "https://github.com/trevid/trevid-website#readme",
+  "homepage": "https://github.com/mivio/mivio-website#readme",
   "dependencies": {
     "bluebird": "^3.0.5",
     "body-parser": "^1.14.1",
@@ -35,7 +35,7 @@
     "method-override": "^2.3.5",
     "morgan": "^1.6.1",
     "response-time": "^2.3.1",
-    "trevid-data": "^0.1.0",
+    "mivio-data": "^0.1.0",
     "urlset": "^0.4.2"
   },
   "devDependencies": {

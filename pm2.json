@@ -1,5 +1,5 @@
 {
   "script"    : "./lib/app.js",
-  "name"      : "trevid-website",
+  "name"      : "mivio-website",
   "max_memory_restart" : "200M"
 }
