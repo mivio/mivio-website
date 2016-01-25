@@ -1,13 +1,13 @@
 {
   "home": "/",
-  "video": "/video/${0}.html",
-  "category": "/${0}",
+  "video": "/video/${0}",
+  "category": "/category-${0}",
   "assets": {
     "css": {
-      "main": "/main.css"
+      "main": "/main.min.css"
     },
     "js": {
-      "main": "/main.js"
+      "main": "/main.min.js"
     }
   },
   "actions": {

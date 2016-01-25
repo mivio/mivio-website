@@ -9,9 +9,9 @@ block main_content
       h1= video.title
       ul.vi-stats.stats-main
         li.vi-date= new Date(video.createdAt).toLocaleDateString(lang)
-        //- each item in video.categories
-        //-   li.vi-category
-        //-     a(href=links.category(item.id, {lang: lang}))= item.name
+        if (video.category)
+          li.vi-category
+            a(href=links.category(video.category.id))= video.category.name
         li.vi-views= video.countViews
     #video-iframe
       iframe(src="https://www.youtube.com/embed/"+video.sourceId, frameborder="0", allowfullscreen)

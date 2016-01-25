@@ -38,10 +38,15 @@ body {
     >li {
         display: inline-block;
         float: left;
-        margin: 5px;
         >a {
             display: inline-block;
-            padding: 5px;
+            margin: 5px 9px;
+            padding: 5px 1px 2px 1px;
+            border-bottom: 3px solid transparent;
+            text-decoration: none;
+            &.active {
+                border-bottom-color: @brand-primary;
+            }
         }
     }
 }
@@ -84,6 +89,7 @@ body {
         position: relative;
     }
 }
+
 h1.line-header {
     &:before {
         top: 22px;
@@ -92,6 +98,7 @@ h1.line-header {
         top: 18px;
     }
 }
+
 h2.line-header {
     &:before {
         top: 18px;
@@ -100,6 +107,7 @@ h2.line-header {
         top: 14px;
     }
 }
+
 h4.line-header {
     &:before {
         top: 10px;

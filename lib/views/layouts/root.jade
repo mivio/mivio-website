@@ -29,13 +29,13 @@ html(lang=lang)
               ul#page-menu
                 each item in pageMenu
                   li
-                    a(class=item.cssClass, href=item.href)= item.text
+                    a(class=(selectedCategory && selectedCategory.id===item.id ? 'active': null), href=item.href)= item.text.split(' ')[0]
             .hidden-xs.hidden-sm.col-md-3
         #page-content.clearfix
           block content
         #page-footer.clearfix
           .row
-            .col-xs-12.col-sm-6
+            //- .col-xs-12.col-sm-6
               //- .list-set
               //-   h4.list-title.line-header
               //-     span= __('project_languages')
@@ -46,16 +46,21 @@ html(lang=lang)
               //-     li
               //-         a(rel='nofollow' href='http://github.com/openpeaks/openpeaks-articles')= __('add_your_language')
 
-            .col-xs-12.col-sm-6
+            .col-xs-12
                 h4.list-title.line-header
                   span= __('about_us')
                 p= __('about_us_info')
+                p.text-muted Version 
+                  = config.version
 
     if (actionUrl)
       script.
         (function(){(new Image()).src = '#{actionUrl}';})();
 
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js')
     script(type='text/javascript', src=links.assets.js.main())
+    script.
+      $("img.lazy").lazyload();
     block scripts
     //- script.
     //-   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

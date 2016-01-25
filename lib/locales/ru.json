@@ -1,8 +1,10 @@
 {
-	"project_title": "project_title",
-	"project_description": "project_description",
+	"project_title": "Самые интересные видео",
+	"project_description": "Самые интересные видео на сегодняшний день в сети.",
 	"latest_videos": "Новые видео",
-	"about_us": "about_us",
-	"about_us_info": "about_us_info",
-  "related_videos": "Похожие видео"
+	"about_us": "О нас",
+	"about_us_info": "Каждый день мы находим наиболее интересные видео в сети.",
+	"related_videos": "Похожие видео",
+	"page_title_by_category": "%s - Самые интересные видео",
+	"page_description_by_category": "%s. Самые интересные видео."
 }
