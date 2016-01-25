@@ -1,7 +1,7 @@
 extends layouts/main
 
 block metas
-  //- +articleMetas(video, articleText)
+  include ./partials/video_metas
 
 block main_content
   div#video
@@ -14,7 +14,7 @@ block main_content
             a(href=links.category(video.category.id))= video.category.name
         li.vi-views= video.countViews
     #video-iframe
-      iframe(src="https://www.youtube.com/embed/"+video.sourceId, frameborder="0", allowfullscreen)
+      iframe(src=links.videoEmbed(video.id), frameborder="0", allowfullscreen)
     p=video.description
   //- p.text-muted= __('article_update_info')
   br

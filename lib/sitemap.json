@@ -15,6 +15,7 @@
       "video": "/video/${0}/${1}"
     }
   },
+  "videoEmbed": "/embed/${0}",
   "videoImage": "//i.ytimg.com/vi/${0}/default.jpg",
   "videoImage1": "//i.ytimg.com/vi/${0}/mqdefault.jpg",
   "videoImage2": "//i.ytimg.com/vi/${0}/hqdefault.jpg",
