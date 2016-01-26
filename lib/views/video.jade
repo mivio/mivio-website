@@ -17,6 +17,9 @@ block main_content
             li.vi-category
               a(href=links.category(video.category.id))= video.category.name
           li.vi-views= video.countViews
+            |  (+
+            = video.sourceCountViews.toLocaleString(lang)
+            |)
       .col-xs-12.col-sm-5
         .share-buttons
           .ya-share2(data-services='vkontakte,facebook,odnoklassniki,moimir,twitter', data-counter='', data-url=site.head.canonical)
