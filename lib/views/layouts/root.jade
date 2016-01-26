@@ -12,6 +12,8 @@ html(lang=lang)
       meta(name='description', content=site.head.description)
     if (site.head.keywords)
       meta(name='keywords', content=site.head.keywords)
+    if (config.fbId)
+      meta(property="fb:app_id", content=config.fbId)
     block metas
     link(type='text/css', rel='stylesheet', href=links.assets.css.main({v:config.version}))
     block styles
