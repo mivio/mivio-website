@@ -4,7 +4,7 @@ block metas
   include ./partials/video_metas
 
 block main_content
-  div#video
+  #video
     #video-header
       h1= video.title
       ul.vi-stats.stats-main
@@ -18,6 +18,8 @@ block main_content
     p=video.description
   //- p.text-muted= __('article_update_info')
   br
+  #video-comments
+    #disqus_thread
 
 
 block aside_content_top

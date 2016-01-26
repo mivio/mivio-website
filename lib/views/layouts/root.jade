@@ -13,7 +13,7 @@ html(lang=lang)
     if (site.head.keywords)
       meta(name='keywords', content=site.head.keywords)
     block metas
-    link(type='text/css', rel='stylesheet', href=links.assets.css.main())
+    link(type='text/css', rel='stylesheet', href=links.assets.css.main({v:config.version}))
     block styles
     if (site.head.canonical)
       link(rel='canonical', href=site.head.canonical)
@@ -69,7 +69,7 @@ html(lang=lang)
         (function(){(new Image()).src = '#{actionUrl}';})();
 
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js')
-    script(type='text/javascript', src=links.assets.js.main())
+    script(type='text/javascript', src=links.assets.js.main({v:config.version}))
     script.
-      $("img.lazy").lazyload();
+      $('img.lazy').lazyload();
     block scripts
