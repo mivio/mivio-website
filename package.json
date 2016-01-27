@@ -35,7 +35,7 @@
     "method-override": "^2.3.5",
     "morgan": "^1.6.1",
     "response-time": "^2.3.1",
-    "mivio-data": "^0.1.0",
+    "mivio-data": "^0.1.2",
     "urlset": "^0.4.2"
   },
   "devDependencies": {

@@ -16,7 +16,7 @@ body {
 
 #page-logo {
     display: inline-block;
-    padding: 5px 14px;
+    padding: 5px 14px 2px 14px;
     margin-top: 10px;
     background-color: @brand-primary;
     font-size: 120%;
@@ -24,6 +24,10 @@ body {
     color: #fff;
     text-decoration: none;
     border-radius: @border-radius;
+    border-bottom: 3px solid darken(@brand-primary, 5%);
+    &:hover {
+        background-color: darken(@brand-primary, 5%);
+    }
 }
 
 #page-menu {
