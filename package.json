@@ -50,6 +50,7 @@
     "gulp-rev-all": "^0.8.22",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.1",
-    "jquery-lazyload": "^1.9.7"
+    "jquery-lazyload": "^1.9.7",
+    "merge-stream": "^1.0.0"
   }
 }

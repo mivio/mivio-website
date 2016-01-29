@@ -2,9 +2,11 @@
   "home": "/",
   "video": "/video/${0}",
   "category": "/category-${0}",
+  "iframe": "/iframe",
   "assets": {
     "css": {
-      "main": "/main.min.css"
+      "main": "/main.min.css",
+      "iframe": "/iframe.min.css"
     },
     "js": {
       "main": "/main.min.js"
