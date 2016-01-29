@@ -44,6 +44,8 @@ html(lang=lang)
                   li
                     a(class=(selectedCategory && selectedCategory.id===item.id ? 'active': null), href=item.href)= item.text.split(' ')[0]
             .hidden-xs.hidden-sm.col-md-3
+              #page-search
+                gcse:search
         #page-content.clearfix
           block content
         #page-footer.clearfix
