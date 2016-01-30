@@ -11,9 +11,9 @@ block main_content
     #video-iframe
       iframe(src=links.videoEmbed(video.id), frameborder="0", allowfullscreen)
     .row
-      .col-xs-12.col-sm-8
+      .col-xs-12.col-sm-7
         ul.vi-stats.stats-main
-          li.vi-date= new Date(video.createdAt).toLocaleDateString(lang)
+          li.vi-date= util.moment(video.createdAt).locale(lang).fromNow(true)
           if (video.category)
             li.vi-category
               a(href=links.category(video.category.id))= video.category.name
@@ -21,7 +21,7 @@ block main_content
             |  (+
             = video.sourceCountViews.toLocaleString(lang)
             |)
-      .col-xs-12.col-sm-4
+      .col-xs-12.col-sm-5
         .share-buttons
           .ya-share2(data-services='vkontakte,facebook,odnoklassniki,moimir,twitter', data-counter='', data-url=site.head.canonical)
           //- .fb-share-button(data-href=site.head.canonical, data-layout='button_count')
