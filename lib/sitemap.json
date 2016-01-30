@@ -22,5 +22,10 @@
   "videoImage1": "//i.ytimg.com/vi/${0}/mqdefault.jpg",
   "videoImage2": "//i.ytimg.com/vi/${0}/hqdefault.jpg",
   "videoImage3": "//i.ytimg.com/vi/${0}/sddefault.jpg",
-  "videoImage4": "//i.ytimg.com/vi/${0}/maxresdefault.jpg"
+  "videoImage4": "//i.ytimg.com/vi/${0}/maxresdefault.jpg",
+
+  "rss": {
+    "videos": "/videos.rss",
+    "videosByCategory": "/videos/${0}.rss"
+  }
 }
