@@ -19,6 +19,9 @@ html(lang=lang)
     block styles
     if (site.head.canonical)
       link(rel='canonical', href=site.head.canonical)
+    if (site.head.links)
+      each item in site.head.links
+        link(rel=item.rel, type=item.type, title=item.title, href=item.href)
   body
     if (config.gtmId)
       // Google Tag Manager
@@ -45,7 +48,7 @@ html(lang=lang)
                     a(class=(selectedCategory && selectedCategory.id===item.id ? 'active': null), href=item.href)= item.text.split(' ')[0]
             .hidden-xs.hidden-sm.col-md-3
               #page-search
-                gcse:search
+                //- gcse:search
         #page-content.clearfix
           block content
         #page-footer.clearfix

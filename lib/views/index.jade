@@ -2,3 +2,6 @@ extends layouts/wide
 
 block main_content
   +videoListMain(latestVideos, 'xs-cols-1 sm-cols-2 md-cols-3')
+  if (latestVideos && latestVideos.length===15)
+    - var last = latestVideos[latestVideos.length - 1];
+    #more-videos(data-last=(last.id+'|'+last.createdAt), data-category=selectedCategory && selectedCategory.id || null)= __('show_more_videos')
