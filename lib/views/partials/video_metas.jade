@@ -1,5 +1,6 @@
 - var embedUrl = 'http://'+config.host+links.videoEmbed(video.id)
 - var image = video.sourceImage || 'https:'+links.videoImage2(video.sourceId);
+- var publisher = 'https://facebook.com/' + config.host;
 
 meta(property='og:site_name', content=config.name)
 meta(property='og:url', content=site.head.canonical)
@@ -19,3 +20,6 @@ meta(name='twitter:image', content=image)
 meta(name='twitter:player', content=embedUrl)
 meta(name='twitter:player:width', content='1280')
 meta(name='twitter:player:height', content='720')
+link(rel='publisher', href=publisher)
+meta(property='article:publisher', content=publisher)
+meta(property='article:author', content=publisher)
