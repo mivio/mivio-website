@@ -7,5 +7,7 @@
 	"related_videos": "Похожие видео",
 	"page_title_by_category": "%s - Самые интересные видео",
 	"page_description_by_category": "%s. Самые интересные видео.",
-	"show_more_videos": "Хочу видеть больше видео"
+	"show_more_videos": "Хочу видеть больше видео",
+  "video": "Видео",
+  "video_title_format": "%s (Видео)"
 }
